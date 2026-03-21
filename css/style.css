@@ -10080,20 +10080,7 @@ textarea.form-control {
 .cv-preview-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 20px; }
-
-.cv-frame-wrap {
-  overflow: hidden;
-  border-radius: 18px;
-  border: 1px solid rgba(16, 38, 60, 0.1);
-  background: #f8fbff; }
-
-.cv-frame-wrap iframe {
-  display: block;
-  width: 100%;
-  height: 760px;
-  border: 0; }
+  gap: 12px; }
 
 .academic-list-section h3 {
   font-family: 'Cormorant Garamond', serif;
@@ -10426,8 +10413,6 @@ textarea.form-control {
     grid-template-columns: 72px minmax(0, 1fr); }
   .cv-preview-copy {
     flex-direction: column; }
-  .cv-frame-wrap iframe {
-    height: 620px; }
   .academic-cta {
     flex-direction: column;
     align-items: flex-start; }
@@ -10458,8 +10443,6 @@ textarea.form-control {
     grid-template-columns: 1fr; }
   .cv-preview-card {
     padding: 22px 18px 22px; }
-  .cv-frame-wrap iframe {
-    height: 500px; }
   .institution-mark {
     min-height: 72px; }
   .institution-mark--logo img {
