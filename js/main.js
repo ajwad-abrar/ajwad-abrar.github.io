@@ -590,8 +590,9 @@ $(function() {
   }
 
   var metrics = window.scholarMetrics;
+  var hasMetrics = typeof metrics.citations === 'number' || typeof metrics.h_index === 'number' || typeof metrics.i10_index === 'number';
   var formatValue = function(value) {
-    return typeof value === 'number' ? value.toLocaleString() : '--';
+    return typeof value === 'number' ? value.toLocaleString() : 'Sync pending';
   };
 
   $('#scholar-citations').text(formatValue(metrics.citations));
@@ -604,6 +605,11 @@ $(function() {
       $('#scholar-updated').text('Last synced ' + updated.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) + '.');
       return;
     }
+  }
+
+  if (!hasMetrics) {
+    $('#scholar-updated').text('Awaiting the first GitHub Actions sync from SerpApi.');
+    return;
   }
 
   $('#scholar-updated').text('Scholar metrics loaded from the latest stored update.');
