@@ -531,8 +531,10 @@ $(function() {
 
 $(function() {
   var counterMounted = false;
+  var $visitCounter = $('#visit-counter');
+  var $visitCounterNote = $('#visit-counter-note');
   var mountCounter = function() {
-    if (counterMounted || !window.goatcounter || !window.goatcounter.visit_count || !$('#visit-counter').length) {
+    if (counterMounted || !window.goatcounter || !window.goatcounter.visit_count || !$visitCounter.length) {
       return;
     }
 
@@ -568,6 +570,10 @@ $(function() {
         }
       `
     });
+
+    if ($visitCounterNote.length) {
+      $visitCounterNote.text('Showing the current GoatCounter visit total.');
+    }
   };
 
   var counterPoll = setInterval(function() {
@@ -580,38 +586,13 @@ $(function() {
   setTimeout(function() {
     if (!counterMounted) {
       clearInterval(counterPoll);
+      if ($visitCounter.length) {
+        $visitCounter.text('Visit count not available yet');
+      }
+      if ($visitCounterNote.length) {
+        $visitCounterNote.text('Make sure GoatCounter visitor counts are enabled and that the live site has received at least one unblocked visit.');
+      }
     }
   }, 8000);
-});
-
-$(function() {
-  if (!$('#scholar-metrics-card').length || !window.scholarMetrics) {
-    return;
-  }
-
-  var metrics = window.scholarMetrics;
-  var hasMetrics = typeof metrics.citations === 'number' || typeof metrics.h_index === 'number' || typeof metrics.i10_index === 'number';
-  var formatValue = function(value) {
-    return typeof value === 'number' ? value.toLocaleString() : 'Sync pending';
-  };
-
-  $('#scholar-citations').text(formatValue(metrics.citations));
-  $('#scholar-h-index').text(formatValue(metrics.h_index));
-  $('#scholar-i10-index').text(formatValue(metrics.i10_index));
-
-  if (metrics.updated_at) {
-    var updated = new Date(metrics.updated_at);
-    if (!isNaN(updated.getTime())) {
-      $('#scholar-updated').text('Last synced ' + updated.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) + '.');
-      return;
-    }
-  }
-
-  if (!hasMetrics) {
-    $('#scholar-updated').text('Awaiting the first GitHub Actions sync from SerpApi.');
-    return;
-  }
-
-  $('#scholar-updated').text('Scholar metrics loaded from the latest stored update.');
 });
 
