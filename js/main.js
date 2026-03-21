@@ -539,6 +539,7 @@ $(function() {
     }
 
     counterMounted = true;
+    $visitCounter.empty();
     window.goatcounter.visit_count({
       append: '#visit-counter',
       path: 'TOTAL',
