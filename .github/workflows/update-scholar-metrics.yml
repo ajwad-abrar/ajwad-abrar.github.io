@@ -1,0 +1,40 @@
+name: Update Scholar Metrics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '21 3 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Refresh Google Scholar metrics
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          SCHOLAR_AUTHOR_ID: GQObpIcAAAAJ
+        run: node scripts/update-scholar-metrics.js
+
+      - name: Commit and push updated metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/scholar-metrics.json data/scholar-metrics.js; then
+            echo "No metric changes to commit."
+            exit 0
+          fi
+          git add data/scholar-metrics.json data/scholar-metrics.js
+          git commit -m "Update Google Scholar metrics"
+          git push

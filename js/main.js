@@ -440,3 +440,172 @@ $(function() {
 
 });
 
+$(function() {
+  var $contactForm = $('#contact-form');
+  var $feedback = $('#contact-feedback');
+  var recipientEmail = 'ajwadabrar@iut-dhaka.edu';
+
+  if (!$contactForm.length) {
+    return;
+  }
+
+  var buildDraft = function() {
+    var name = $.trim($('#contact-name').val());
+    var email = $.trim($('#contact-email').val());
+    var type = $.trim($('#contact-type').val());
+    var subject = $.trim($('#contact-subject').val());
+    var message = $.trim($('#contact-message').val());
+
+    return {
+      name: name,
+      email: email,
+      type: type,
+      subject: subject,
+      message: message,
+      valid: !!(name && email && subject && message)
+    };
+  };
+
+  var buildMailto = function(draft) {
+    var mailSubject = '[' + draft.type + '] ' + draft.subject;
+    var body = [
+      'Name: ' + draft.name,
+      'Email: ' + draft.email,
+      'Type: ' + draft.type,
+      '',
+      'Message:',
+      draft.message
+    ].join('\n');
+
+    return {
+      subject: mailSubject,
+      body: body,
+      href: 'mailto:' + recipientEmail + '?subject=' + encodeURIComponent(mailSubject) + '&body=' + encodeURIComponent(body)
+    };
+  };
+
+  var setFeedback = function(message) {
+    $feedback.text(message);
+  };
+
+  $contactForm.on('submit', function(event) {
+    event.preventDefault();
+
+    var draft = buildDraft();
+
+    if (!draft.valid) {
+      setFeedback('Please fill in your name, email, subject, and message first.');
+      return;
+    }
+
+    setFeedback('Opening your email app...');
+    window.location.href = buildMailto(draft).href;
+  });
+
+  $('#copy-email-button').on('click', function() {
+    navigator.clipboard.writeText(recipientEmail).then(function() {
+      setFeedback('Email address copied.');
+    }, function() {
+      setFeedback('Could not copy automatically. Please use: ' + recipientEmail);
+    });
+  });
+
+  $('#copy-message-button').on('click', function() {
+    var draft = buildDraft();
+
+    if (!draft.valid) {
+      setFeedback('Please complete the form before copying the message.');
+      return;
+    }
+
+    var mail = buildMailto(draft);
+    var plainText = 'To: ' + recipientEmail + '\nSubject: ' + mail.subject + '\n\n' + mail.body;
+
+    navigator.clipboard.writeText(plainText).then(function() {
+      setFeedback('Draft copied. You can paste it into any email client.');
+    }, function() {
+      setFeedback('Could not copy automatically. Please try again.');
+    });
+  });
+});
+
+$(function() {
+  var counterMounted = false;
+  var mountCounter = function() {
+    if (counterMounted || !window.goatcounter || !window.goatcounter.visit_count || !$('#visit-counter').length) {
+      return;
+    }
+
+    counterMounted = true;
+    window.goatcounter.visit_count({
+      append: '#visit-counter',
+      path: 'TOTAL',
+      no_branding: true,
+      type: 'html',
+      style: `
+        div {
+          width: 100%;
+          min-height: 48px;
+          border: 0;
+          background: transparent;
+          padding: 0;
+          margin: 0;
+          color: #17304a;
+          font-family: 'Manrope', sans-serif;
+        }
+        #gcvc-for {
+          display: block;
+          margin-bottom: 4px;
+          color: #5c7690;
+          font-size: 13px;
+        }
+        #gcvc-views {
+          display: block;
+          color: #10263c;
+          font-size: 1.9rem;
+          font-weight: 800;
+          line-height: 1.1;
+        }
+      `
+    });
+  };
+
+  var counterPoll = setInterval(function() {
+    mountCounter();
+    if (counterMounted) {
+      clearInterval(counterPoll);
+    }
+  }, 200);
+
+  setTimeout(function() {
+    if (!counterMounted) {
+      clearInterval(counterPoll);
+    }
+  }, 8000);
+});
+
+$(function() {
+  if (!$('#scholar-metrics-card').length || !window.scholarMetrics) {
+    return;
+  }
+
+  var metrics = window.scholarMetrics;
+  var formatValue = function(value) {
+    return typeof value === 'number' ? value.toLocaleString() : '--';
+  };
+
+  $('#scholar-citations').text(formatValue(metrics.citations));
+  $('#scholar-h-index').text(formatValue(metrics.h_index));
+  $('#scholar-i10-index').text(formatValue(metrics.i10_index));
+
+  if (metrics.updated_at) {
+    var updated = new Date(metrics.updated_at);
+    if (!isNaN(updated.getTime())) {
+      $('#scholar-updated').text('Last synced ' + updated.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) + '.');
+      return;
+    }
+  }
+
+  $('#scholar-updated').text('Scholar metrics loaded from the latest stored update.');
+});
+
