@@ -12,13 +12,38 @@ const outputDir = path.join(__dirname, '..', 'data');
 const jsonPath = path.join(outputDir, 'scholar-metrics.json');
 const jsPath = path.join(outputDir, 'scholar-metrics.js');
 
+const coerceMetricValue = (value) => {
+  if (typeof value === 'number') {
+    return value;
+  }
+
+  if (typeof value === 'string') {
+    const parsed = Number(value.replace(/,/g, '').trim());
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+
+  return null;
+};
+
 const getMetricValue = (table, key) => {
   const metric = table.find((entry) => entry[key]);
   if (!metric || !metric[key]) {
     return null;
   }
 
-  return metric[key].all ?? null;
+  return coerceMetricValue(metric[key].all);
+};
+
+const findMetricsTable = (payload) => {
+  if (Array.isArray(payload?.cited_by?.table)) {
+    return payload.cited_by.table;
+  }
+
+  if (Array.isArray(payload?.author?.cited_by?.table)) {
+    return payload.author.cited_by.table;
+  }
+
+  return [];
 };
 
 const run = async () => {
@@ -35,7 +60,7 @@ const run = async () => {
   }
 
   const payload = await response.json();
-  const table = payload?.cited_by?.table || [];
+  const table = findMetricsTable(payload);
 
   const metrics = {
     author_id: authorId,
@@ -43,8 +68,16 @@ const run = async () => {
     citations: getMetricValue(table, 'citations'),
     h_index: getMetricValue(table, 'h_index'),
     i10_index: getMetricValue(table, 'i10_index'),
-    updated_at: new Date().toISOString()
+    updated_at: payload?.search_metadata?.processed_at || new Date().toISOString()
   };
+
+  if (payload?.error) {
+    throw new Error(`SerpApi returned an error: ${payload.error}`);
+  }
+
+  if (metrics.citations === null && metrics.h_index === null && metrics.i10_index === null) {
+    throw new Error(`Scholar metrics were not found in the SerpApi response. Available top-level keys: ${Object.keys(payload).join(', ')}`);
+  }
 
   fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(jsonPath, JSON.stringify(metrics, null, 2) + '\n', 'utf8');
