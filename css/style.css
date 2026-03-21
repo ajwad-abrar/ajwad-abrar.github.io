@@ -9962,6 +9962,13 @@ textarea.form-control {
 .contact-panel {
   padding: 28px 30px; }
 
+.equal-card-row > [class*="col-lg-"] {
+  display: flex; }
+
+.equal-card-row .contact-panel {
+  width: 100%;
+  height: 100%; }
+
 .interest-tags {
   display: flex;
   flex-wrap: wrap;
@@ -10282,62 +10289,6 @@ textarea.form-control {
   text-align: right;
   word-break: break-word; }
 
-.contact-form {
-  margin-top: 22px; }
-
-.contact-form label {
-  display: block;
-  margin-bottom: 8px;
-  color: #17304a;
-  font-size: 14px;
-  font-weight: 700; }
-
-.contact-form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px; }
-
-.contact-form .form-group {
-  margin-bottom: 16px; }
-
-.contact-form .form-control {
-  min-height: 54px;
-  border-radius: 16px;
-  border: 1px solid rgba(16, 38, 60, 0.14);
-  background: #fbfdff;
-  color: #17304a;
-  padding: 14px 16px;
-  box-shadow: none; }
-
-.contact-form textarea.form-control {
-  min-height: 164px;
-  resize: vertical; }
-
-.contact-form .form-control:focus {
-  border-color: rgba(31, 120, 209, 0.45);
-  box-shadow: 0 0 0 4px rgba(31, 120, 209, 0.08); }
-
-.contact-form-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 6px;
-  align-items: center; }
-
-.contact-helper {
-  margin-top: 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  color: #5f7992 !important; }
-
-.contact-helper a {
-  color: #1f78d1; }
-
-#contact-feedback {
-  min-height: 22px;
-  color: #1f78d1 !important;
-  font-weight: 600; }
-
 .academic-footer {
   padding: 40px 0 60px;
   background: #10263c;
@@ -10387,8 +10338,6 @@ textarea.form-control {
   .news-date {
     grid-row: auto;
     margin-bottom: 2px; }
-  .contact-form-grid {
-    grid-template-columns: 1fr; }
 }
 
 @media (max-width: 767.98px) {
@@ -10424,9 +10373,6 @@ textarea.form-control {
     flex-direction: column; }
   .contact-list a {
     text-align: left; }
-  .contact-form-actions {
-    flex-direction: column;
-    align-items: stretch; }
   .footer-wrap {
     flex-direction: column;
     align-items: flex-start; }
