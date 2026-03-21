@@ -9739,10 +9739,7 @@ textarea.form-control {
   position: relative;
   min-height: 100vh;
   padding: 140px 0 80px;
-  background:
-    radial-gradient(circle at top right, rgba(52, 152, 219, 0.14), transparent 28%),
-    radial-gradient(circle at left center, rgba(17, 71, 128, 0.12), transparent 24%),
-    linear-gradient(180deg, #f7faff 0%, #edf3fb 100%); }
+  background: #f7f9fc; }
 
 .academic-hero-row {
   min-height: calc(100vh - 220px); }
@@ -9760,11 +9757,11 @@ textarea.form-control {
 .eyebrow,
 .section-kicker {
   display: inline-block;
-  margin-bottom: 14px;
-  color: #1f78d1;
-  font-size: 13px;
+  margin-bottom: 12px;
+  color: #3f6f9e;
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: .12em;
+  letter-spacing: .1em;
   text-transform: uppercase; }
 
 .academic-intro h1 {
@@ -9793,20 +9790,20 @@ textarea.form-control {
 .academic-btn-primary,
 .academic-btn-secondary {
   border-radius: 999px;
-  padding: 14px 24px;
+  padding: 12px 20px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: .02em; }
 
 .academic-btn-primary {
-  background: #1f78d1;
+  background: #17304a;
   color: #fff !important;
-  border: 1px solid #1f78d1; }
+  border: 1px solid #17304a; }
 
 .academic-btn-secondary {
-  background: rgba(255, 255, 255, 0.82);
-  color: #1b496d !important;
-  border: 1px solid rgba(27, 73, 109, 0.12); }
+  background: transparent;
+  color: #36597b !important;
+  border: 1px solid rgba(54, 89, 123, 0.18); }
 
 .academic-hero-panel,
 .academic-sidecard,
@@ -9815,14 +9812,14 @@ textarea.form-control {
 .academic-cta,
 .publication-card,
 .news-updates-box {
-  border-radius: 24px;
+  border-radius: 18px;
   border: 1px solid rgba(16, 38, 60, 0.08);
-  background: rgba(255, 255, 255, 0.88);
-  -webkit-box-shadow: 0 18px 60px rgba(28, 56, 92, 0.08);
-  box-shadow: 0 18px 60px rgba(28, 56, 92, 0.08); }
+  background: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
 
 .academic-hero-panel {
-  padding: 28px; }
+  padding: 24px; }
 
 .profile-card {
   display: grid;
@@ -9856,10 +9853,10 @@ textarea.form-control {
   gap: 14px; }
 
 .snapshot-card {
-  border-radius: 18px;
-  padding: 18px;
-  background: linear-gradient(180deg, #f8fbff 0%, #eef5fd 100%);
-  border: 1px solid rgba(31, 120, 209, 0.12); }
+  border-radius: 14px;
+  padding: 16px;
+  background: #f9fbfd;
+  border: 1px solid rgba(16, 38, 60, 0.08); }
 
 .snapshot-card strong {
   display: block;
@@ -9874,9 +9871,9 @@ textarea.form-control {
 .visit-counter-card {
   margin-top: 16px;
   padding: 16px 18px;
-  border-radius: 18px;
-  background: linear-gradient(180deg, #f8fbff 0%, #eef5fd 100%);
-  border: 1px solid rgba(31, 120, 209, 0.12); }
+  border-radius: 14px;
+  background: #f9fbfd;
+  border: 1px solid rgba(16, 38, 60, 0.08); }
 
 .visit-counter-label {
   display: block;
@@ -9929,10 +9926,10 @@ textarea.form-control {
   text-align: left !important; }
 
 .academic-section {
-  padding: 100px 0; }
+  padding: 88px 0; }
 
 .section-heading {
-  margin-bottom: 34px; }
+  margin-bottom: 28px; }
 
 .section-heading h2 {
   font-size: 3.1rem;
@@ -9960,7 +9957,7 @@ textarea.form-control {
 .academic-sidecard,
 .academic-block,
 .contact-panel {
-  padding: 28px 30px; }
+  padding: 24px 26px; }
 
 .equal-card-row > [class*="col-lg-"] {
   display: flex; }
@@ -9972,15 +9969,15 @@ textarea.form-control {
 .interest-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 18px 0 26px; }
+  gap: 8px;
+  margin: 16px 0 22px; }
 
 .interest-tags span {
   border-radius: 999px;
-  padding: 10px 14px;
-  background: #eef5fd;
-  color: #234c71;
-  font-size: 13px;
+  padding: 8px 12px;
+  background: #f4f7fa;
+  color: #355678;
+  font-size: 12px;
   font-weight: 700; }
 
 .academic-metrics div,
@@ -10005,7 +10002,7 @@ textarea.form-control {
 .news-updates-box {
   max-height: 520px;
   overflow-y: auto;
-  padding: 10px 26px; }
+  padding: 8px 20px; }
 
 .news-updates-list {
   margin: 0;
@@ -10016,9 +10013,9 @@ textarea.form-control {
   display: grid;
   grid-template-columns: 116px minmax(0, 1fr);
   column-gap: 18px;
-  padding: 22px 0;
+  padding: 16px 0;
   border-bottom: 1px solid rgba(16, 38, 60, 0.08);
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.55;
   color: #244562; }
 
@@ -10051,23 +10048,23 @@ textarea.form-control {
 .academic-block h3,
 .academic-sidecard h3,
 .contact-panel h3 {
-  font-size: 2.2rem;
-  margin-bottom: 20px; }
+  font-size: 1.9rem;
+  margin-bottom: 14px; }
 
 .academic-list-section {
-  margin-bottom: 52px; }
+  margin-bottom: 38px; }
 
 .academic-list-section h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #10263c;
-  margin-bottom: 18px;
-  padding-bottom: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
   border-bottom: 1px solid rgba(16, 38, 60, 0.08); }
 
 .institution-list {
   display: grid;
-  gap: 16px; }
+  gap: 10px; }
 
 .institution-card {
   display: grid;
@@ -10080,8 +10077,8 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   min-height: 110px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, #edf5fd 0%, #e2edf8 100%);
+  border-radius: 16px;
+  background: #f7f9fc;
   color: #1f78d1;
   font-size: 1.3rem;
   font-weight: 800;
@@ -10090,9 +10087,8 @@ textarea.form-control {
 
 .institution-mark--logo {
   padding: 12px;
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(16, 38, 60, 0.08);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75); }
+  background: #ffffff;
+  border: 1px solid rgba(16, 38, 60, 0.08); }
 
 .institution-mark--logo img {
   display: block;
@@ -10108,12 +10104,12 @@ textarea.form-control {
   max-width: 54px; }
 
 .institution-content {
-  padding: 22px 24px;
-  border-radius: 22px;
+  padding: 18px 20px;
+  border-radius: 16px;
   border: 1px solid rgba(16, 38, 60, 0.1);
-  background: rgba(255, 255, 255, 0.92);
-  -webkit-box-shadow: 0 12px 40px rgba(28, 56, 92, 0.06);
-  box-shadow: 0 12px 40px rgba(28, 56, 92, 0.06);
+  background: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   min-height: 110px; }
 
 .institution-header {
@@ -10193,9 +10189,9 @@ textarea.form-control {
   gap: 16px; }
 
 .service-card {
-  border-radius: 18px;
-  padding: 20px;
-  background: linear-gradient(180deg, #fbfdff 0%, #f1f6fc 100%);
+  border-radius: 14px;
+  padding: 18px;
+  background: #fafbfd;
   border: 1px solid rgba(16, 38, 60, 0.08); }
 
 .publications-section .section-heading {
@@ -10203,26 +10199,26 @@ textarea.form-control {
 
 .publication-groups {
   display: grid;
-  gap: 30px; }
+  gap: 24px; }
 
 .publication-group {
   display: grid;
-  gap: 18px; }
+  gap: 14px; }
 
 .group-label {
   display: inline-block;
   align-self: start;
   border-radius: 999px;
-  padding: 8px 16px;
-  background: #17304a;
-  color: #fff;
-  font-size: 13px;
+  padding: 6px 12px;
+  background: #f4f7fa;
+  color: #355678;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: .08em;
   text-transform: uppercase; }
 
 .publication-card {
-  padding: 22px 24px; }
+  padding: 18px 20px; }
 
 .pub-year {
   display: inline-block;
@@ -10251,14 +10247,14 @@ textarea.form-control {
   line-height: 1.5; }
 
 .academic-cta-section {
-  padding: 30px 0 100px; }
+  padding: 24px 0 88px; }
 
 .academic-cta {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  padding: 32px; }
+  padding: 24px 26px; }
 
 .academic-cta h2 {
   font-size: 2.7rem;
