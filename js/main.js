@@ -544,32 +544,7 @@ $(function() {
       append: '#visit-counter',
       path: 'TOTAL',
       no_branding: true,
-      type: 'html',
-      style: `
-        div {
-          width: 100%;
-          min-height: 48px;
-          border: 0;
-          background: transparent;
-          padding: 0;
-          margin: 0;
-          color: #17304a;
-          font-family: 'Manrope', sans-serif;
-        }
-        #gcvc-for {
-          display: block;
-          margin-bottom: 4px;
-          color: #5c7690;
-          font-size: 13px;
-        }
-        #gcvc-views {
-          display: block;
-          color: #10263c;
-          font-size: 1.9rem;
-          font-weight: 800;
-          line-height: 1.1;
-        }
-      `
+      type: 'html'
     });
 
     if ($visitCounterNote.length) {

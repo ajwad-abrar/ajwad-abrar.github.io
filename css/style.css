@@ -9894,6 +9894,33 @@ textarea.form-control {
   font-weight: 800;
   line-height: 1.1; }
 
+#visit-counter > div,
+#visit-counter #gcvc {
+  width: 100% !important;
+  min-height: 72px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-family: 'Manrope', sans-serif !important; }
+
+#visit-counter #gcvc-for {
+  display: block !important;
+  margin-bottom: 6px !important;
+  color: #5c7690 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important; }
+
+#visit-counter #gcvc-views {
+  display: block !important;
+  color: #10263c !important;
+  font-size: 2.35rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  padding-bottom: 4px !important; }
+
 .visit-counter-note {
   margin: 10px 0 0;
   color: #5f7992;
