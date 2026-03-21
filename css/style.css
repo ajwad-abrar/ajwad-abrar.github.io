@@ -10050,38 +10050,6 @@ textarea.form-control {
 .academic-list-section {
   margin-bottom: 52px; }
 
-.cv-preview-card {
-  margin-bottom: 40px;
-  padding: 26px 28px 30px;
-  border-radius: 26px;
-  border: 1px solid rgba(16, 38, 60, 0.1);
-  background: rgba(255, 255, 255, 0.94);
-  -webkit-box-shadow: 0 14px 44px rgba(28, 56, 92, 0.08);
-  box-shadow: 0 14px 44px rgba(28, 56, 92, 0.08); }
-
-.cv-preview-copy {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 18px; }
-
-.cv-preview-copy h3 {
-  margin-bottom: 0;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  color: #10263c; }
-
-.cv-preview-copy p {
-  max-width: 720px;
-  margin-bottom: 0;
-  color: #425e79; }
-
-.cv-preview-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px; }
-
 .academic-list-section h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.4rem;
@@ -10411,8 +10379,6 @@ textarea.form-control {
     grid-template-columns: 1fr; }
   .institution-card {
     grid-template-columns: 72px minmax(0, 1fr); }
-  .cv-preview-copy {
-    flex-direction: column; }
   .academic-cta {
     flex-direction: column;
     align-items: flex-start; }
@@ -10441,8 +10407,6 @@ textarea.form-control {
     grid-template-columns: 1fr 1fr; }
   .institution-card {
     grid-template-columns: 1fr; }
-  .cv-preview-card {
-    padding: 22px 18px 22px; }
   .institution-mark {
     min-height: 72px; }
   .institution-mark--logo img {
