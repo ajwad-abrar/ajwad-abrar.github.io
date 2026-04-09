@@ -1,4 +1,16 @@
 [
+{
+    "date": "Feb 2026",
+    "title": "A Transformer Based Pipeline for Software Requirements Classification",
+    "link": "https://doi.org/10.1145/3801619.3801635",
+    "detail": "Accepted to 15th ICSCA held in Langkawi, Malaysia."
+  },
+ {
+    "date": "Feb 2026",
+    "title": "Addressing Data Scarcity in Bangla Fake News Detection: An LLM-Based Dataset Augmentation Approach",
+    "link": "https://doi.org/10.1145/3801619.3801644",
+    "detail": "Accepted to 15th ICSCA held in Langkawi, Malaysia."
+  },
   {
     "date": "Nov 2025",
     "title": "Religious bias landscape in language and text-to-image models: analysis, detection, and debiasing strategies",
