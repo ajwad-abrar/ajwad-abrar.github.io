@@ -1,5 +1,11 @@
 [
 {
+    "date": "Mar 2026",
+    "title": "BanglaSummEval: Reference-Free Factual Consistency Evaluation for Bangla Summarization",
+    "link": "https://aclanthology.org/2026.loreslm-1.51/",
+    "detail": "Accepted to the 2nd Workshop on Language Models for Low-Resource Languages at EACL 2026."
+  },
+{
     "date": "Feb 2026",
     "title": "A Transformer Based Pipeline for Software Requirements Classification",
     "link": "https://doi.org/10.1145/3801619.3801635",
