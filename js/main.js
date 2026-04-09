@@ -483,3 +483,111 @@ $(function() {
   }, 8000);
 });
 
+$(function() {
+  var updatesList = document.getElementById('updates-list');
+  var publicationsRoot = document.getElementById('publication-groups');
+
+  var escapeHtml = function(value) {
+    return String(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  };
+
+  var renderUpdates = function(items) {
+    if (!updatesList) {
+      return;
+    }
+
+    updatesList.innerHTML = items.map(function(item) {
+      var title = escapeHtml(item.title);
+      var detail = escapeHtml(item.detail);
+      var date = escapeHtml(item.date);
+      var link = escapeHtml(item.link);
+
+      return [
+        '<li>',
+        '<span class="news-date">' + date + '</span>',
+        '<a href="' + link + '" target="_blank" rel="noopener noreferrer">' + title + '</a>',
+        '<span class="news-detail">' + detail + '</span>',
+        '</li>'
+      ].join('');
+    }).join('');
+  };
+
+  var renderPublications = function(items) {
+    if (!publicationsRoot) {
+      return;
+    }
+
+    var categoryOrder = ['Journal', 'Conference', 'Workshop'];
+    var grouped = items.reduce(function(acc, item) {
+      var category = item.category || 'Other';
+      if (!acc[category]) {
+        acc[category] = [];
+      }
+      acc[category].push(item);
+      return acc;
+    }, {});
+
+    var categories = categoryOrder.filter(function(category) {
+      return grouped[category] && grouped[category].length;
+    }).concat(Object.keys(grouped).filter(function(category) {
+      return categoryOrder.indexOf(category) === -1;
+    }));
+
+    publicationsRoot.innerHTML = categories.map(function(category) {
+      var cards = grouped[category].map(function(item) {
+        return [
+          '<article class="publication-card">',
+          '<span class="pub-year">' + escapeHtml(item.year) + '</span>',
+          '<h3><a href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.title) + '</a></h3>',
+          '<p class="pub-authors">' + escapeHtml(item.authors) + '</p>',
+          '<p class="pub-venue">' + escapeHtml(item.venue) + '</p>',
+          '</article>'
+        ].join('');
+      }).join('');
+
+      return [
+        '<div class="publication-group ftco-animate">',
+        '<div class="group-label">' + escapeHtml(category) + '</div>',
+        cards,
+        '</div>'
+      ].join('');
+    }).join('');
+  };
+
+  var showDataError = function(target, message) {
+    if (!target) {
+      return;
+    }
+    target.innerHTML = '<p class="data-error">' + escapeHtml(message) + '</p>';
+  };
+
+  fetch('data/updates.json')
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error('Failed to load updates');
+      }
+      return response.json();
+    })
+    .then(renderUpdates)
+    .catch(function() {
+      showDataError(updatesList, 'Updates could not be loaded right now.');
+    });
+
+  fetch('data/publications.json')
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error('Failed to load publications');
+      }
+      return response.json();
+    })
+    .then(renderPublications)
+    .catch(function() {
+      showDataError(publicationsRoot, 'Publications could not be loaded right now.');
+    });
+});
+

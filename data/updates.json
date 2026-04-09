@@ -1,0 +1,62 @@
+[
+  {
+    "date": "Nov 2025",
+    "title": "Religious bias landscape in language and text-to-image models: analysis, detection, and debiasing strategies",
+    "link": "https://doi.org/10.1007/s00146-025-02721-z",
+    "detail": "Published in AI & Society."
+  },
+  {
+    "date": "Sep 2025",
+    "title": "Faithful Summarization of Consumer Health Queries: A Cross-Lingual Framework with LLMs",
+    "link": "https://openreview.net/forum?id=JqL8apXuEb",
+    "detail": "Accepted to the 5th Muslims in Machine Learning Workshop at NeurIPS 2025."
+  },
+  {
+    "date": "Sep 2025",
+    "title": "FirstAidQA: A Synthetic Dataset for First Aid and Emergency Response in Low Connectivity Settings",
+    "link": "https://openreview.net/forum?id=YRE333q5iu",
+    "detail": "Accepted to the 5th Muslims in Machine Learning Workshop at NeurIPS 2025."
+  },
+  {
+    "date": "Sep 2025",
+    "title": "Enhancing Bangla Cyberbullying Detection with Data Augmentation: A Performance Evaluation",
+    "link": "https://doi.org/10.1109/SCOReD68498.2025.11398938",
+    "detail": "Accepted to IEEE SCOReD 2025."
+  },
+  {
+    "date": "Aug 2025",
+    "title": "Break the Checkbox: Challenging Closed-Style Evaluations of Cultural Alignment in LLMs",
+    "link": "https://aclanthology.org/2025.emnlp-main.2/",
+    "detail": "Accepted to EMNLP 2025."
+  },
+  {
+    "date": "Jul 2025",
+    "title": "AI Tools in Education: Investigating University Students' Motivations, Institutional Policies, and Ethical Considerations in Bangladesh",
+    "link": "https://doi.org/10.1145/3764687.3769951",
+    "detail": "Accepted to OzCHI 2025."
+  },
+  {
+    "date": "Jun 2025",
+    "title": "From Chat to Checkup: Can Large Language Models Assist in Diabetes Prediction?",
+    "link": "https://doi.org/10.1109/QPAIN66474.2025.11171691",
+    "detail": "Accepted to QPAIN 2025."
+  },
+  {
+    "date": "Jun 2025",
+    "title": "Evaluating the Effectiveness of Large Language Models in Multi-Document Summarization of Bangla News Articles",
+    "link": "https://doi.org/10.1007/978-3-032-11352-8_21",
+    "detail": "Accepted to ICDSAIA 2025."
+  },
+  {
+    "date": "Apr 2025",
+    "title": "TYMBERT: Tiny Yet Mighty - Fine-Tuned and Compressed TinyBERT for High-Accuracy, Low-Resource NLP",
+    "link": "https://doi.org/10.1109/NCIM65934.2025.11160230",
+    "detail": "Accepted to NCIM 2025."
+  },
+  {
+    "date": "Dec 2024",
+    "title": "Performance Evaluation of Large Language Models in Bangla Consumer Health Query Summarization",
+    "link": "https://doi.org/10.1109/ICCIT64611.2024.11022034",
+    "detail": "Published in the proceedings of ICCIT 2024."
+  }
+]

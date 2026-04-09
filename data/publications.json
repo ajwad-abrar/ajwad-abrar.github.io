@@ -1,0 +1,82 @@
+[
+  {
+    "category": "Journal",
+    "year": "2025",
+    "title": "Religious bias landscape in language and text-to-image models: analysis, detection, and debiasing strategies",
+    "authors": "Ajwad Abrar, Nafisa Tabassum Oeshy, Mohsinul Kabir, Sophia Ananiadou",
+    "venue": "AI & Society: Knowledge, Culture and Communication, Springer Nature",
+    "link": "https://doi.org/10.1007/s00146-025-02721-z"
+  },
+  {
+    "category": "Conference",
+    "year": "2025",
+    "title": "Break the Checkbox: Challenging Closed-Style Evaluations of Cultural Alignment in LLMs",
+    "authors": "Mohsinul Kabir, Ajwad Abrar, Sophia Ananiadou",
+    "venue": "EMNLP 2025",
+    "link": "https://aclanthology.org/2025.emnlp-main.2/"
+  },
+  {
+    "category": "Conference",
+    "year": "2025",
+    "title": "AI Tools in Education: Investigating University Students' Motivations, Institutional Policies, and Ethical Considerations in Bangladesh",
+    "authors": "Mohaymen Ul Anam, Mukit Mahdin, Maheen Mashrur Hoque, Ajwad Abrar, Sadik Yasin Eftee, Ashraful Islam, M Ashraful Amin",
+    "venue": "OzCHI 2025",
+    "link": "https://doi.org/10.1145/3764687.3769951"
+  },
+  {
+    "category": "Conference",
+    "year": "2025",
+    "title": "Enhancing Bangla Cyberbullying Detection with Data Augmentation: A Performance Evaluation",
+    "authors": "MD Mohaymen Ul Anam, Ajwad Abrar, Maheen Mashrur Haque, Jahanggir Hossain Setu, Ashraful Islam, M. Ashraful Amin",
+    "venue": "IEEE SCOReD 2025",
+    "link": "https://doi.org/10.1109/SCOReD68498.2025.11398938"
+  },
+  {
+    "category": "Conference",
+    "year": "2025",
+    "title": "From Chat to Checkup: Can Large Language Models Assist in Diabetes Prediction?",
+    "authors": "Shadman Sakib, Oishy Fatema Akhand, Ajwad Abrar",
+    "venue": "QPAIN 2025",
+    "link": "https://arxiv.org/abs/2506.14949"
+  },
+  {
+    "category": "Conference",
+    "year": "2025",
+    "title": "Evaluating the Effectiveness of Large Language Models in Multi-Document Summarization of Bangla News Articles",
+    "authors": "Sadik Yasin Eftee, Ajwad Abrar",
+    "venue": "ICDSAIA 2025, CCIS Vol. 2682, Springer",
+    "link": "https://doi.org/10.1007/978-3-032-11352-8_21"
+  },
+  {
+    "category": "Conference",
+    "year": "2025",
+    "title": "TYMBERT: Tiny Yet Mighty - Fine-Tuned and Compressed TinyBERT for High-Accuracy, Low-Resource NLP",
+    "authors": "Md. Soyeb, Mukit Mahdin, Syed Samin Sadaf, Mirza Mohammad Azwad, Ajwad Abrar",
+    "venue": "NCIM 2025",
+    "link": "https://doi.org/10.1109/NCIM65934.2025.11160230"
+  },
+  {
+    "category": "Conference",
+    "year": "2024",
+    "title": "Performance Evaluation of Large Language Models in Bangla Consumer Health Query Summarization",
+    "authors": "Ajwad Abrar, Farzana Tabassum, Sabbir Ahmed",
+    "venue": "ICCIT 2024",
+    "link": "https://doi.org/10.1109/ICCIT64611.2024.11022034"
+  },
+  {
+    "category": "Workshop",
+    "year": "2025",
+    "title": "Faithful Summarization of Consumer Health Queries: A Cross-Lingual Framework with LLMs",
+    "authors": "Ajwad Abrar, Nafisa Tabassum Oeshy, Prianka Maheru, Farzana Tabassum, Tareque Mohmud Chowdhury",
+    "venue": "Muslims in Machine Learning Workshop at NeurIPS 2025",
+    "link": "https://openreview.net/forum?id=JqL8apXuEb"
+  },
+  {
+    "category": "Workshop",
+    "year": "2025",
+    "title": "FirstAidQA: A Synthetic Dataset for First Aid and Emergency Response in Low Connectivity Settings",
+    "authors": "Rezwan Islam Salvi, Saiyma Sittul Muna, Md. Mushfiqur Rahman Mushfique, Ajwad Abrar",
+    "venue": "Muslims in Machine Learning Workshop at NeurIPS 2025",
+    "link": "https://openreview.net/forum?id=YRE333q5iu"
+  }
+]

@@ -10039,6 +10039,12 @@ textarea.form-control {
   color: #506b84;
   line-height: 1.45; }
 
+.data-error {
+  margin: 0;
+  padding: 16px 0;
+  color: #6a8096;
+  font-size: 15px; }
+
 .academic-metrics strong a,
 .contact-note a {
   color: inherit;
