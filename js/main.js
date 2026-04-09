@@ -551,7 +551,7 @@ $(function() {
       }).join('');
 
       return [
-        '<div class="publication-group ftco-animate">',
+        '<div class="publication-group">',
         '<div class="group-label">' + escapeHtml(category) + '</div>',
         cards,
         '</div>'
