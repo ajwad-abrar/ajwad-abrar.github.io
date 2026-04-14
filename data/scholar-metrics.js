@@ -1,8 +1,8 @@
 window.scholarMetrics = {
   "author_id": "GQObpIcAAAAJ",
   "profile_url": "https://scholar.google.com/citations?user=GQObpIcAAAAJ&hl=en",
-  "citations": 60,
+  "citations": 61,
   "h_index": 5,
   "i10_index": 2,
-  "updated_at": "2026-04-13 05:58:05 UTC"
+  "updated_at": "2026-04-14 05:33:46 UTC"
 };
