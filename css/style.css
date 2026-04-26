@@ -10350,12 +10350,27 @@ textarea.form-control {
   .section-heading h2,
   .academic-cta h2 {
     font-size: 2.45rem; }
+  .hero-summary {
+    font-size: .98rem;
+    line-height: 1.75; }
   .hero-actions {
     gap: 10px; }
+  .hero-actions .btn {
+    min-width: 0; }
   .profile-card {
     grid-template-columns: 1fr; }
   .snapshot-grid {
     grid-template-columns: 1fr 1fr; }
+  .snapshot-card {
+    padding: 14px; }
+  .snapshot-card strong {
+    font-size: 1.55rem; }
+  .visit-counter-card {
+    padding: 14px 16px; }
+  #visit-counter {
+    font-size: 1.55rem; }
+  #visit-counter #gcvc-views {
+    font-size: 1.85rem !important; }
   .institution-card {
     grid-template-columns: 1fr; }
   .institution-mark {
@@ -10369,8 +10384,12 @@ textarea.form-control {
     gap: 6px; }
   .publication-card h3 {
     font-size: 1.4rem; }
+  .publication-card {
+    padding: 16px 16px; }
   .news-updates-box {
     padding: 6px 18px; }
+  .news-updates-list li {
+    padding: 14px 0; }
   .contact-list li {
     flex-direction: column; }
   .contact-list a {
@@ -10378,4 +10397,80 @@ textarea.form-control {
   .footer-wrap {
     flex-direction: column;
     align-items: flex-start; }
+}
+
+@media (max-width: 575.98px) {
+  .academic-hero {
+    padding: 108px 0 52px; }
+  .academic-intro h1,
+  .section-heading h2,
+  .academic-cta h2 {
+    font-size: 2.05rem; }
+  .eyebrow,
+  .section-kicker {
+    font-size: 11px;
+    letter-spacing: .08em; }
+  .hero-role {
+    font-size: .98rem;
+    margin-bottom: 14px; }
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%; }
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center; }
+  .academic-hero-panel,
+  .academic-sidecard,
+  .academic-block,
+  .contact-panel,
+  .academic-cta,
+  .publication-card,
+  .news-updates-box {
+    border-radius: 14px; }
+  .academic-hero-panel,
+  .academic-sidecard,
+  .academic-block,
+  .contact-panel {
+    padding: 18px; }
+  .profile-photo {
+    min-height: 220px; }
+  .profile-meta p {
+    margin-bottom: 10px;
+    font-size: .95rem; }
+  .snapshot-grid {
+    grid-template-columns: 1fr; }
+  .visit-counter-note {
+    font-size: 12px; }
+  .section-heading {
+    margin-bottom: 22px; }
+  .academic-list-section h3,
+  .academic-block h3,
+  .academic-sidecard h3,
+  .contact-panel h3 {
+    font-size: 1.7rem; }
+  .institution-content {
+    padding: 16px; }
+  .institution-header h4 {
+    font-size: 1.25rem; }
+  .institution-content p,
+  .institution-points li,
+  .pub-authors,
+  .pub-venue {
+    font-size: .94rem; }
+  .news-updates-box {
+    padding: 4px 14px; }
+  .news-updates-list li {
+    font-size: 14px; }
+  .news-date {
+    font-size: 14px; }
+  .publication-card h3 {
+    font-size: 1.22rem;
+    line-height: 1.3; }
+  .group-label {
+    font-size: 11px; }
+  .contact-list li {
+    gap: 8px; }
+  .footer-links {
+    gap: 12px; }
 }
