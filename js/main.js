@@ -496,6 +496,20 @@ $(function() {
       .replace(/'/g, '&#39;');
   };
 
+  var highlightAuthorName = function(authors) {
+    return String(authors)
+      .split(',')
+      .map(function(author) {
+        var trimmed = author.trim();
+        var safeAuthor = escapeHtml(trimmed);
+        if (trimmed === 'Ajwad Abrar' || trimmed === 'Ajwad Abrar Mostofa') {
+          return '<strong class="author-highlight">' + safeAuthor + '</strong>';
+        }
+        return safeAuthor;
+      })
+      .join(', ');
+  };
+
   var renderUpdates = function(items) {
     if (!updatesList) {
       return;
@@ -544,7 +558,7 @@ $(function() {
           '<article class="publication-card">',
           '<span class="pub-year">' + escapeHtml(item.year) + '</span>',
           '<h3><a href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.title) + '</a></h3>',
-          '<p class="pub-authors">' + escapeHtml(item.authors) + '</p>',
+          '<p class="pub-authors">' + highlightAuthorName(item.authors) + '</p>',
           '<p class="pub-venue">' + escapeHtml(item.venue) + '</p>',
           '</article>'
         ].join('');

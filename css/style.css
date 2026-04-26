@@ -10248,6 +10248,10 @@ textarea.form-control {
   color: #223f5b;
   line-height: 1.5; }
 
+.author-highlight {
+  color: #10263c;
+  font-weight: 800; }
+
 .pub-venue {
   margin-bottom: 0;
   line-height: 1.5; }
