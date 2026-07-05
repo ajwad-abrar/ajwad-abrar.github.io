@@ -10172,14 +10172,14 @@ textarea.form-control {
 
 .group-label {
   display: inline-block;
-  align-self: start;
+  justify-self: start;
   border-radius: 999px;
-  padding: 6px 12px;
-  background: #f4f7fa;
-  color: #355678;
-  font-size: 12px;
+  padding: 7px 16px;
+  background: #17304a;
+  color: #ffffff;
+  font-size: 12.5px;
   font-weight: 800;
-  letter-spacing: .08em;
+  letter-spacing: .1em;
   text-transform: uppercase; }
 
 .publication-card {
