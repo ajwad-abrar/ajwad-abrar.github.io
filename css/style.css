@@ -9870,58 +9870,34 @@ textarea.form-control {
 
 .visit-counter-card {
   margin-top: 16px;
-  padding: 16px 18px;
-  border-radius: 14px;
-  background: #f9fbfd;
-  border: 1px solid rgba(16, 38, 60, 0.08); }
+  padding-top: 14px;
+  border-top: 1px solid rgba(16, 38, 60, 0.08); }
 
 .visit-counter-label {
   display: block;
-  margin-bottom: 8px;
-  color: #1f78d1;
-  font-size: 12px;
-  font-weight: 800;
+  margin-bottom: 4px;
+  color: #8195a8;
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase; }
 
 #visit-counter {
-  min-height: 48px;
-  color: #10263c;
-  font-size: 1.9rem;
-  font-weight: 800;
-  line-height: 1.1; }
+  min-height: auto;
+  color: #55708b;
+  font-size: .95rem;
+  font-weight: 600;
+  line-height: 1.3; }
 
-#visit-counter > div,
-#visit-counter #gcvc {
-  width: 100% !important;
-  min-height: 72px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  font-family: 'Manrope', sans-serif !important; }
-
-#visit-counter #gcvc-for {
-  display: block !important;
-  margin-bottom: 6px !important;
-  color: #5c7690 !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  line-height: 1.35 !important; }
-
-#visit-counter #gcvc-views {
-  display: block !important;
-  color: #10263c !important;
-  font-size: 2.35rem !important;
-  font-weight: 800 !important;
-  line-height: 1.2 !important;
-  padding-bottom: 4px !important; }
+#visit-counter iframe {
+  display: block;
+  filter: grayscale(1) opacity(.55);
+  -webkit-filter: grayscale(1) opacity(.55); }
 
 .visit-counter-note {
-  margin: 10px 0 0;
-  color: #5f7992;
-  font-size: 13px;
+  margin: 6px 0 0;
+  color: #8195a8;
+  font-size: 12px;
   line-height: 1.5;
   text-align: left !important; }
 
@@ -10369,12 +10345,6 @@ textarea.form-control {
     padding: 14px; }
   .snapshot-card strong {
     font-size: 1.55rem; }
-  .visit-counter-card {
-    padding: 14px 16px; }
-  #visit-counter {
-    font-size: 1.55rem; }
-  #visit-counter #gcvc-views {
-    font-size: 1.85rem !important; }
   .institution-card {
     grid-template-columns: 1fr; }
   .institution-mark {
