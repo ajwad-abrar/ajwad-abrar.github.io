@@ -610,3 +610,23 @@ $(function() {
     });
 });
 
+$(function() {
+  var $toast = $('<div class="copy-toast" role="status" aria-live="polite">Email copied to clipboard</div>');
+  $('body').append($toast);
+  var hideTimer;
+
+  $(document).on('click', 'a[href^="mailto:"]', function() {
+    if (!navigator.clipboard || !navigator.clipboard.writeText) {
+      return;
+    }
+    var email = $(this).attr('href').replace('mailto:', '').split('?')[0];
+    navigator.clipboard.writeText(email).then(function() {
+      clearTimeout(hideTimer);
+      $toast.addClass('is-visible');
+      hideTimer = setTimeout(function() {
+        $toast.removeClass('is-visible');
+      }, 1800);
+    }).catch(function() {});
+  });
+});
+

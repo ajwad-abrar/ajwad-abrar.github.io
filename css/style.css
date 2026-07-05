@@ -10261,7 +10261,16 @@ textarea.form-control {
 .contact-list a {
   color: #17304a;
   text-align: right;
-  word-break: break-word; }
+  word-break: break-word;
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 120, 209, 0.35);
+  text-underline-offset: 3px;
+  transition: color .15s ease, text-decoration-color .15s ease; }
+
+.contact-list a:hover,
+.contact-list a:focus-visible {
+  color: #1f78d1;
+  text-decoration-color: currentColor; }
 
 .academic-footer {
   padding: 40px 0 60px;
@@ -10438,3 +10447,25 @@ textarea.form-control {
   .footer-links {
     gap: 12px; }
 }
+
+.copy-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  transform: translate(-50%, 12px);
+  background: #17304a;
+  color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(16, 38, 60, 0.24);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+  z-index: 2000; }
+
+.copy-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0); }
