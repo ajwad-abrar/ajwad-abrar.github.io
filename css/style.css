@@ -9879,13 +9879,19 @@ textarea.form-control {
   font-weight: 800; }
 
 .visit-counter-card {
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(16, 38, 60, 0.08); }
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #f9fbfd;
+  border: 1px solid rgba(16, 38, 60, 0.08); }
 
 .visit-counter-label {
   display: block;
-  margin-bottom: 4px;
   color: #8195a8;
   font-size: 11px;
   font-weight: 700;
@@ -9901,8 +9907,10 @@ textarea.form-control {
 
 #visit-counter iframe {
   display: block;
-  filter: grayscale(1) opacity(.55);
-  -webkit-filter: grayscale(1) opacity(.55); }
+  border-radius: 10px;
+  overflow: hidden;
+  filter: grayscale(1) opacity(.5);
+  -webkit-filter: grayscale(1) opacity(.5); }
 
 .academic-section {
   padding: 88px 0; }
