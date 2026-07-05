@@ -484,6 +484,19 @@ $(function() {
 });
 
 $(function() {
+  var metrics = window.scholarMetrics;
+  var $citations = $('#scholar-citations');
+  var $hindex = $('#scholar-hindex');
+
+  if (metrics && typeof metrics.citations === 'number') {
+    $citations.text(metrics.citations);
+  }
+  if (metrics && typeof metrics.h_index === 'number') {
+    $hindex.text(metrics.h_index);
+  }
+});
+
+$(function() {
   var updatesList = document.getElementById('updates-list');
   var publicationsRoot = document.getElementById('publication-groups');
 

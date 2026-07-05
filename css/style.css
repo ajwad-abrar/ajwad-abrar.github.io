@@ -9868,6 +9868,12 @@ textarea.form-control {
   color: #55708b;
   font-size: 14px; }
 
+.scholar-metrics-note {
+  margin: 10px 0 0;
+  color: #8195a8;
+  font-size: 12px;
+  line-height: 1.5; }
+
 .visit-counter-card {
   margin-top: 16px;
   padding-top: 14px;
@@ -10217,7 +10223,16 @@ textarea.form-control {
   margin-bottom: 10px; }
 
 .publication-card h3 a {
-  color: #14324a; }
+  color: #14324a;
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 120, 209, 0.35);
+  text-underline-offset: 3px;
+  transition: color .15s ease, text-decoration-color .15s ease; }
+
+.publication-card h3 a:hover,
+.publication-card h3 a:focus-visible {
+  color: #1f78d1;
+  text-decoration-color: currentColor; }
 
 .pub-authors {
   font-weight: 700;
