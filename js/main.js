@@ -443,7 +443,6 @@ $(function() {
 $(function() {
   var counterMounted = false;
   var $visitCounter = $('#visit-counter');
-  var $visitCounterNote = $('#visit-counter-note');
   var mountCounter = function() {
     if (counterMounted || !window.goatcounter || !window.goatcounter.visit_count || !$visitCounter.length) {
       return;
@@ -457,10 +456,6 @@ $(function() {
       no_branding: true,
       type: 'html'
     });
-
-    if ($visitCounterNote.length) {
-      $visitCounterNote.text('Showing the current GoatCounter visit total.');
-    }
   };
 
   var counterPoll = setInterval(function() {
@@ -475,9 +470,6 @@ $(function() {
       clearInterval(counterPoll);
       if ($visitCounter.length) {
         $visitCounter.text('Visit count not available yet');
-      }
-      if ($visitCounterNote.length) {
-        $visitCounterNote.text('Make sure GoatCounter visitor counts are enabled and that the live site has received at least one unblocked visit.');
       }
     }
   }, 8000);

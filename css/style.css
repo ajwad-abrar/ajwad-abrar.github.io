@@ -9849,30 +9849,34 @@ textarea.form-control {
 
 .snapshot-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px; }
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px; }
 
 .snapshot-card {
   border-radius: 14px;
-  padding: 16px;
+  padding: 12px 10px;
   background: #f9fbfd;
   border: 1px solid rgba(16, 38, 60, 0.08); }
 
 .snapshot-card strong {
   display: block;
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   color: #123456;
   margin-bottom: 4px; }
 
 .snapshot-card span {
   color: #55708b;
-  font-size: 14px; }
+  font-size: 12.5px; }
 
 .scholar-metrics-note {
-  margin: 10px 0 0;
-  color: #8195a8;
-  font-size: 12px;
+  margin: 14px 0 0;
+  color: #55708b;
+  font-size: 13px;
   line-height: 1.5; }
+
+.scholar-metrics-note strong {
+  color: #123456;
+  font-weight: 800; }
 
 .visit-counter-card {
   margin-top: 16px;
@@ -9899,13 +9903,6 @@ textarea.form-control {
   display: block;
   filter: grayscale(1) opacity(.55);
   -webkit-filter: grayscale(1) opacity(.55); }
-
-.visit-counter-note {
-  margin: 6px 0 0;
-  color: #8195a8;
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: left !important; }
 
 .academic-section {
   padding: 88px 0; }
@@ -10429,8 +10426,6 @@ textarea.form-control {
     font-size: .95rem; }
   .snapshot-grid {
     grid-template-columns: 1fr; }
-  .visit-counter-note {
-    font-size: 12px; }
   .section-heading {
     margin-bottom: 22px; }
   .academic-list-section h3,
