@@ -4,5 +4,5 @@ window.scholarMetrics = {
   "citations": 128,
   "h_index": 5,
   "i10_index": 4,
-  "updated_at": "2026-10-19 08:58:32 UTC"
+  "updated_at": "2026-10-20 08:37:09 UTC"
 };
